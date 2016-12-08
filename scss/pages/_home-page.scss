@@ -1,0 +1,136 @@
+// Home Page SCSS
+
+
+@import 'reset';
+
+@mixin border-radius($radius){
+	
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+	border-radius:$radius;
+	}
+
+#header{
+	max-width:500px;	
+	
+	}
+
+
+/*------ USE OF FONT STACK ------ */
+body{
+	font: 100% $font-stack;
+	
+	padding-left:  2.5%;
+	padding-right: 2.5%;
+	padding-top: 2.5%;
+	}
+
+
+#home-page {
+	clear:both;
+
+	h1 {
+		color: $mike-blue;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+			
+	}
+	figure img{
+		width:100%;
+		display:block;
+		/*------ USE OF MIXINS ------ */
+		@include border-radius($radius);
+		}
+		
+	p {
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		}
+	ul {
+		padding-left: 2.5%;
+		padding-right: 2.5%;
+		width:100%;
+		}	
+	li {
+		list-style:none;
+		display:block;
+		float:left;
+		width:25%;
+		}
+	/*------ USE OF OPERATORS ------ */
+	article  {
+		width:450px / 960px *100%;
+		display:block;
+		float:left;
+		padding-top:2.5%;
+		padding-left:  2.5%;
+		
+		}
+	
+	/*------ USE OF EXTEND 1 ------ */
+	.article1 {
+		color:grey;
+		
+		}
+		
+	.article2 {
+		@extend .article1;
+		
+		}				
+	
+	
+
+}// #home-page
+
+#navigation{
+		nav {
+			max-width:50% * 2;	
+			padding-left:  2.5%;
+			padding-right: 2.5%;
+			}
+		
+		
+		nav li {
+		
+		float:right;
+		border-right: solid 2px black;
+		list-style: none;
+		padding:.5em;
+		
+		}
+		
+		
+		/*------ USE OF EXTEND 2 ------ */
+		.home{
+			color: $mike-orange;	
+			}
+		.about{
+			@extend .home;	
+			}
+		.photo{
+			@extend .home;	
+			}
+		.contact{
+			@extend .home;	
+			}
+	}
+
+
+
+#header {
+
+	h1 {
+		color: $mike-red;
+		max-width:500px;	
+		float:left;
+		padding-left:  5%;
+		padding-right: 5%;
+		padding-bottom:2%;
+	}
+	
+	
+
+}// #header
+

@@ -1,0 +1,21 @@
+// footer SCSS
+
+#footer {
+	ul  {
+		
+		}	
+	li{
+		border-right: solid 2px black;
+		list-style: none;
+		padding:.5em;
+		color: $mike-blue;
+		display:block;
+		float:right;
+		}
+	ul{
+		padding-right:35%;
+		}		
+	
+	
+
+}// #footer
